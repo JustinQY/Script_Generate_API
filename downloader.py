@@ -1,7 +1,7 @@
+import os
 from huggingface_hub import snapshot_download, login
 
-
-hf_token = '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'
+hf_token = os.getenv("HF_TOKEN")
 login(token=hf_token)
 
 # 下载模型（需同意许可的模型如 LLaMA2 必须先申请权限）
