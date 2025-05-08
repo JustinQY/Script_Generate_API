@@ -10,5 +10,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
+# 设置默认端口
+ENV PORT=7860
+
 # 启动 FastAPI 服务
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["./start.sh"]
